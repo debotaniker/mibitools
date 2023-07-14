@@ -1,6 +1,6 @@
 # MibiTools R Package
 
-![MibiTools Logo](https://example.com/mibitools_logo.png)
+`* place holder picture *`
 
 ## Overview
 
@@ -25,3 +25,24 @@ To install the MibiTools package, you can use the `devtools` package in R. Run t
 
 ```R
 devtools::install_github("your-username/mibitools")
+```
+## Usage
+
+To import data from a specific device, simply call the corresponding function provided by the MibiTools package. For example, to read data from a Contros CO2 probe, you can use the read_contros() function:
+
+```R
+
+data <- read_contros(filename, probeid)
+```
+Make sure to replace filename with the path to your data file and probeid with the specific identifier of your Contros CO2 probe.
+## Extensibility
+
+The MibiTools package has been designed with extensibility in mind. It aims to support additional devices, probes, and loggers commonly used within the Mibi working group. The package can easily be extended by adding new functions to read data from new devices as needed. We encourage contributions from the Mibi working group members to expand the functionality of the package.
+
+## Feedback and Contributions
+
+We welcome feedback, bug reports, and feature requests from users of the MibiTools package. If you encounter any issues or have suggestions for improvements, please open an issue on our GitHub repository.
+
+If you would like to contribute to the package by adding support for new devices or enhancing existing functionalities, you can submit a pull request on GitHub. Your contributions will be greatly appreciated and will help benefit the entire Mibi working group.
+
+Please copy the above content as is, and it should work seamlessly in your README.md file.
