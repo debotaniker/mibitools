@@ -47,5 +47,3 @@ read_contros <- function(filename, tz) {
     )
     return(result)
 }
-
-data <- read_contros(filename, "UTC")
