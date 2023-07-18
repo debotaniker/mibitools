@@ -5,8 +5,11 @@
 #'
 #' @param filename Filename of the datafile.
 #' @param egm_model Character, which contains the model number of the EGM CO2 analyzer.
-#' @return Clean datafile of the measurements.
+#'
+#' @return "data.frame" of the measurements.
+#'
 #' @keywords gc co2 ch4 n2o o2 headspace
+#'
 #' @export
 #' @examples
 #' # Example usage of the function
