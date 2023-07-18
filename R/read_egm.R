@@ -18,16 +18,6 @@
 #' @importFrom package_name3 function4
 #' @import package_name3
 
-setwd("C:\\Users\\aurichp\\Nextcloud\\Cloud\\repos\\mibitools\\wd_test")
-filename <-
-  "C:\\Users\\aurichp\\Nextcloud\\Cloud\\repos\\mediwa_project\\membrane_equilibration_unit\\2023_experiment\\Hermeckes_Kiesloch\\EGM_data\\EGM5\\23052210.TXT"
-
-year = "2023"
-egm_model <- "4"
-egm_model <- "5"
-
-test <- read_egm(filename, egm_model, year)
-
 read_egm <- function(filename, egm_model, year) {
   if (egm_model == "4") {
     top <-
