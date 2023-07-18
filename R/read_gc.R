@@ -1,6 +1,6 @@
-#' Function to read data from the GC2 template.
+#' @title Function to read data from the GC2 template.
 #'
-#' This function can be used to read data from the GC2 template file. It takes sample information from the "results" sheet
+#' @description This function can be used to read data from the GC2 template file. It takes sample information from the "results" sheet
 #' and measurement data from "concentration" sheet. Parameter for the function is only the files name.
 #'
 #' @param filename Filename of the datafile.
@@ -22,7 +22,7 @@ library(readxl)
 
 read_gc <- function(filename) {
   dat <-
-    read_excel(filename,
+    readxl::read_excel(filename,
                sheet = "concentration",
                skip = 7,
                col_names = FALSE)
@@ -32,12 +32,12 @@ read_gc <- function(filename) {
     "Sample_id",
     "Temperature_equilibration",
     "Datetime",
-    "CH4_µmol_l",
-    "N2O_µmol_l",
-    "CO2_corrected_µmol_l",
-    "O2_µmol_l",
-    "CO2_simple_µmol_l",
-    "CO1_simple_r_µmol_l",
+    "CH4_?mol_l",
+    "N2O_?mol_l",
+    "CO2_corrected_?mol_l",
+    "O2_?mol_l",
+    "CO2_simple_?mol_l",
+    "CO1_simple_r_?mol_l",
     "empty",
     "Bunsen_CH4",
     "Bunsen_CO2",
@@ -56,7 +56,7 @@ read_gc <- function(filename) {
   dt <- dat$Datetime
 
   results <-
-    read_excel(filename,
+    readxl::read_excel(filename,
                sheet = "results",
                skip = 7,
                col_names = FALSE)[, c(1:13)]
