@@ -9,7 +9,8 @@ read_egm(filename, egm_model, year)
 \arguments{
 \item{filename}{Filename of the datafile.}
 
-\item{egm_model}{Character, which contains the model number of the EGM CO2 analyzer.}
+\item{egm_model}{Character, which contains the model number of the EGM CO2 analyzer.
+#' @param year Character, which contains the year of the measurements, because EGM4 does not record year. Parameter will be discarded of EGM5 was used.}
 }
 \value{
 Clean datafile of the measurements.
@@ -19,8 +20,7 @@ This function can be used to read data from EGM4 and EGM5 CO2 Analyzers.
 }
 \examples{
 # Example usage of the function
-read_egm(filename = "path\\\\to\\\\file.txt", egm_model = "4")
-
+read_egm(filename = "path\\\\to\\\\file.txt", egm_model = "4", year = "2015")
 }
 \keyword{co2}
 \keyword{egm}
