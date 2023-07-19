@@ -1,24 +1,17 @@
-#' @title Function to read data from the GC2 template.
+#' Function to read data from GC2 files
 #'
-#' @description This function can be used to read data from the GC2 template file. It takes sample information from the "results" sheet
-#' and measurement data from "concentration" sheet. Parameter for the function is only the files name.
+#' This function can be used to read data GC template.
 #'
 #' @param filename Filename of the datafile.
-#' @param egm_model Character, which contains the model number of the EGM CO2 analyzer.
 #'
-#' @return "data.frame" of the measurements.
-#'
-#' @keywords gc co2 ch4 n2o o2 headspace
-#'
+#' @return Clean datafile of the measurements.
+#' @keywords co2 gc
 #' @export
 #' @examples
 #' # Example usage of the function
 #' read_gc(filename = "path\\to\\file.txt")
 #'
 #' @importFrom readxl read_excel
-#' @import readxl
-
-library(readxl)
 
 read_gc <- function(filename) {
   dat <-

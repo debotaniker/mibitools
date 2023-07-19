@@ -5,24 +5,12 @@
 #'
 #' @param filename Character, the SD_datafile that contains the data
 #' @param probeid Character, the ID of the probe, e.g. "CO2T-0721-001"
-#' @param post_process Boolian, TRUE if post-processing is wanted, FALSE if raw data is enough
 #' @return A dataframe of the contros data
 #' @keywords contros CO2
 #' @export
 #' @examples
 #' # Example usage of the function
 #' my_function(arg1 = "value1", arg2 = 10)
-#'
-#' @importFrom package_name function1 function2
-#' @import package_name
-#' @importFrom package_name2 function3
-#' @import package_name2
-#' @importFrom package_name3 function4
-#' @import package_name3
-
-setwd("C:\\Users\\aurichp\\Nextcloud\\Cloud\\repos\\mibitools\\wd_test")
-filename <- "C:\\Users\\aurichp\\Nextcloud\\Cloud\\repos\\mediwa_project\\contros_data\\SD_datafiles\\CO2_1110_004\\SD_datafile_20211201_155619CO2-1110-004.txt"
-
 
 read_contros <- function(filename, tz) {
   result <- NULL
