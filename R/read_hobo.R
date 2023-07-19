@@ -1,4 +1,4 @@
-#' Read data from Hobo logger
+#' Read data from Hobo logger.
 #'
 #' This function reads data files of hobo loggers.
 #'
@@ -21,13 +21,13 @@ read_hobo <- function(filename, logger_id) {
     "Angehalten",
     "Dateiende"
   )
-  
+
   for (i in 4:7) {
-    dat[[i]][dat[[i]] == ""] <- NA 
+    dat[[i]][dat[[i]] == ""] <- NA
   }
-  
+
   dt <- as.POSIXct(dat$Datetime, format = "%d.%m.%y %I:%M:%S %p")
-  
+
   result <- data.frame(
     Datetime = dt,
     Sonde = paste("hobo", logger_id, sep = "_"),

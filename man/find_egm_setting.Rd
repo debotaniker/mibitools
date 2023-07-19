@@ -2,23 +2,24 @@
 % Please edit documentation in R/find_egm_setting.R
 \name{find_egm_setting}
 \alias{find_egm_setting}
-\title{Function to read measurement setting of EGM 5}
+\title{Find setting of EGM5}
 \usage{
 find_egm_setting(filename)
 }
 \arguments{
-\item{filename}{Filename of the datafile.}
+\item{filename}{Character that contains the data.}
 }
 \value{
-"M1" - "M6"
+A character representing the measurement setting of EGM in a specific line.
 }
 \description{
-EGM 5 datafiles are different between 6 types of measurement setting. This function reads the setting from the datafile.
+This function reads out the setting of EGM5 for a specific line.
 }
 \examples{
 # Example usage of the function
-read_egm(filename = "path\\\\to\\\\file.txt", egm_model = "4")
-
+setting_line_1 <- find_egm_setting(filename)
 }
+\keyword{co2}
 \keyword{egm}
+\keyword{egm5}
 \keyword{setting}

@@ -1,27 +1,19 @@
-#' Function to read measurement setting of EGM 5
+#' Find setting of EGM5
 #'
-#' EGM 5 datafiles are different between 6 types of measurement setting. This function reads the setting from the datafile.
+#' This function reads out the setting of EGM5 for a specific line.
 #'
-#' @param filename Filename of the datafile.
-#' @return "M1" - "M6"
-#' @keywords egm setting
+#' @param filename Character that contains the data.
+#' @return A character representing the measurement setting of EGM in a specific line.
+#' @keywords egm egm5 co2 setting
 #' @export
 #' @examples
 #' # Example usage of the function
-#' read_egm(filename = "path\\to\\file.txt", egm_model = "4")
-#'
-#' @importFrom package_name function1 function2
-#' @import package_name
-#' @importFrom package_name2 function3
-#' @import package_name2
-#' @importFrom package_name3 function4
-#' @import package_name3
-
+#' setting_line_1 <- find_egm_setting(filename)
 
 find_egm_setting <- function(filename) {
   data <- read.csv(filename, sep = ",", header = FALSE, stringsAsFactors = FALSE)
   nrows <- nrow(data)
-  
+
   # Search for the first non-"Zero" value in the appropriate column
   for (i in 1:nrows) {
     if (data[i, 1] != "Zero") {
@@ -29,7 +21,7 @@ find_egm_setting <- function(filename) {
       break
     }
   }
-  
+
   if (exists("setting")) {
     return(setting)
   } else {

@@ -2,7 +2,7 @@
 % Please edit documentation in R/read_hobo.R
 \name{read_hobo}
 \alias{read_hobo}
-\title{Read data from Hobo logger}
+\title{Read data from Hobo logger.}
 \usage{
 read_hobo(filename, logger_id)
 }

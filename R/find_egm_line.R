@@ -1,3 +1,15 @@
+#' Read single line of EGM5 data.
+#'
+#' This function reads one line of EGM
+#'
+#' @param filename Character that contains the data.
+#' @return A data.frame that includes one row of EGM5 data with correct column names.
+#' @keywords egm egm5 co2 setting
+#' @export
+#' @examples
+#' # Example usage of the function
+#' find_egm_line <- find_egm_setting(line)
+
 find_egm_line <- function(line){
 
   line_unlisted <- unlist(strsplit(x = line, split = ","))
