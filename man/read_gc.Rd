@@ -15,10 +15,5 @@ Clean datafile of the measurements.
 \description{
 This function can be used to read data GC template.
 }
-\examples{
-# Example usage of the function
-read_gc(filename = "path\\\\to\\\\file.txt")
-
-}
 \keyword{co2}
 \keyword{gc}

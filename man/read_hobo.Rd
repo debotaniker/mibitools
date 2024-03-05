@@ -17,9 +17,5 @@ Clean datafile of the measurements.
 \description{
 This function reads data files of hobo loggers.
 }
-\examples{
-# Example usage of the function
-read_egm(filename = "path\\\\to\\\\file.txt", logger_id = "climate_chamber_1")
-}
 \keyword{hobo}
 \keyword{temperature}

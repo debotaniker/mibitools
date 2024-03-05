@@ -4,13 +4,10 @@
 #' This can span multiple lines if needed.
 #'
 #' @param filename Character, the SD_datafile that contains the data
-#' @param probeid Character, the ID of the probe, e.g. "CO2T-0721-001"
+#' @param tz Character, the timezone setting which was used for the Contros probe
 #' @return A dataframe of the contros data
 #' @keywords contros CO2
 #' @export
-#' @examples
-#' # Example usage of the function
-#' my_function(arg1 = "value1", arg2 = 10)
 
 read_contros <- function(filename, tz) {
   result <- NULL

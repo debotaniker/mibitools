@@ -2,8 +2,13 @@
 
 export(find_egm_line)
 export(find_egm_setting)
+export(highlight_night)
 export(read_contros)
 export(read_egm)
 export(read_gc)
 export(read_hobo)
+import(LakeMetabolizer)
+import(dplyr)
+import(ggplot2)
+import(lubridate)
 importFrom(readxl,read_excel)

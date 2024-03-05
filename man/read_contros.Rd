@@ -9,7 +9,7 @@ read_contros(filename, tz)
 \arguments{
 \item{filename}{Character, the SD_datafile that contains the data}
 
-\item{probeid}{Character, the ID of the probe, e.g. "CO2T-0721-001"}
+\item{tz}{Character, the timezone setting which was used for the Contros probe}
 }
 \value{
 A dataframe of the contros data
@@ -17,10 +17,6 @@ A dataframe of the contros data
 \description{
 This function can be used to read Contros probe data from SD data files
 This can span multiple lines if needed.
-}
-\examples{
-# Example usage of the function
-my_function(arg1 = "value1", arg2 = 10)
 }
 \keyword{CO2}
 \keyword{contros}

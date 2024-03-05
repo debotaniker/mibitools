@@ -3,14 +3,9 @@
 #' This function can be used to read data GC template.
 #'
 #' @param filename Filename of the datafile.
-#'
 #' @return Clean datafile of the measurements.
 #' @keywords co2 gc
 #' @export
-#' @examples
-#' # Example usage of the function
-#' read_gc(filename = "path\\to\\file.txt")
-#'
 #' @importFrom readxl read_excel
 
 read_gc <- function(filename) {

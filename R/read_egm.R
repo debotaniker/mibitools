@@ -4,14 +4,10 @@
 #'
 #' @param filename Filename of the datafile.
 #' @param egm_model Character, which contains the model number of the EGM CO2 analyzer.
-#' #' @param year Character, which contains the year of the measurements, because EGM4 does not record year. Parameter will be discarded of EGM5 was used.
+#' @param year Character, which contains the year of the measurements, because EGM4 does not record year. Parameter will be discarded of EGM5 was used.
 #' @return Clean datafile of the measurements.
 #' @keywords egm co2
 #' @export
-#' @examples
-#' # Example usage of the function
-#' read_egm(filename = "path\\to\\file.txt", egm_model = "4", year = "2015")
-
 
 read_egm <- function(filename, egm_model, year) {
   if (egm_model == "4") {

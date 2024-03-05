@@ -16,8 +16,18 @@ A character representing the measurement setting of EGM in a specific line.
 This function reads out the setting of EGM5 for a specific line.
 }
 \examples{
-# Example usage of the function
-setting_line_1 <- find_egm_setting(filename)
+# Create a temporary file with example EGM5 data
+temp_file <- tempfile()
+writeLines(c("Zero", "M1,2024-03-05,12:00,Plot1,1,400,1013,200,10,25,21,0"), temp_file)
+
+# Use the temporary file as input
+setting_line_1 <- find_egm_setting(temp_file)
+
+# Print the setting
+print(setting_line_1)
+
+# Clean up
+unlink(temp_file)
 }
 \keyword{co2}
 \keyword{egm}

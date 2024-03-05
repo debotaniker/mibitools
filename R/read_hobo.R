@@ -7,9 +7,6 @@
 #' @return Clean datafile of the measurements.
 #' @keywords hobo temperature
 #' @export
-#' @examples
-#' # Example usage of the function
-#' read_egm(filename = "path\\to\\file.txt", logger_id = "climate_chamber_1")
 
 read_hobo <- function(filename, logger_id) {
   names(dat) <- c(

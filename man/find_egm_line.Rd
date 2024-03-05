@@ -7,7 +7,7 @@
 find_egm_line(line)
 }
 \arguments{
-\item{filename}{Character that contains the data.}
+\item{line}{Vector (or row) of EGM data.}
 }
 \value{
 A data.frame that includes one row of EGM5 data with correct column names.
@@ -16,8 +16,8 @@ A data.frame that includes one row of EGM5 data with correct column names.
 This function reads one line of EGM
 }
 \examples{
-# Example usage of the function
-find_egm_line <- find_egm_setting(line)
+line_example <- "M1,2024-03-05,12:00,Plot1,1,400,1013,200,10,25,21,0"
+line_processed <- find_egm_line(line_example)
 }
 \keyword{co2}
 \keyword{egm}
